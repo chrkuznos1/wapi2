@@ -11,7 +11,7 @@ pipeline {
                         sh 'ls -la'
 
                         // Run your actual command
-                        sh ''' sleep 60 '''
+                        sh ''' sleep 2 '''
                     } catch (Exception e) {
                         echo "Error occurred: ${e.getMessage()}"
                         error "Build failed"

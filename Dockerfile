@@ -29,4 +29,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 RUN  pwd && ls -la && ls -la /usr/bin/dotnet
 CMD sleep 5
-ENTRYPOINT ["dotnet", "./weatherapi.dll"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+
+
+#ENTRYPOINT ["dotnet", "./weatherapi.dll"]
