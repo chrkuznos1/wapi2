@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Logismos\\MyPrograms\\chris\\home_apps\\weatherapi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB96A047-6B69-4B1B-8215-ECE0AC2D0F50}|weatherapi\\weatherapi.csproj|c:\\logismos\\myprograms\\chris\\home_apps\\weatherapi\\weatherapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB96A047-6B69-4B1B-8215-ECE0AC2D0F50}|weatherapi\\weatherapi.csproj|solutionrelative:weatherapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB96A047-6B69-4B1B-8215-ECE0AC2D0F50}|weatherapi\\weatherapi.csproj|c:\\logismos\\myprograms\\chris\\home_apps\\weatherapi\\weatherapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB96A047-6B69-4B1B-8215-ECE0AC2D0F50}|weatherapi\\weatherapi.csproj|solutionrelative:weatherapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Logismos\\MyPrograms\\chris\\home_apps\\weatherapi\\weatherapi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "weatherapi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Logismos\\MyPrograms\\chris\\home_apps\\weatherapi\\weatherapi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "weatherapi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T18:38:54.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Logismos\\MyPrograms\\chris\\home_apps\\weatherapi\\weatherapi\\Program.cs",
+              "RelativeDocumentMoniker": "weatherapi\\Program.cs",
+              "ToolTip": "C:\\Logismos\\MyPrograms\\chris\\home_apps\\weatherapi\\weatherapi\\Program.cs",
+              "RelativeToolTip": "weatherapi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T18:30:49.398Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
