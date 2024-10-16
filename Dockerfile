@@ -27,9 +27,9 @@ RUN dotnet publish "./weatherapi.csproj" -c $BUILD_CONFIGURATION -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-RUN  pwd && ls -la && ls -la /usr/bin/dotnet
+RUN  pwd && ls -la && ls -la /usr/bin/dotnet && cat /etc/os-release
 CMD sleep 5
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/sh"]
 
 
 #ENTRYPOINT ["dotnet", "./weatherapi.dll"]
