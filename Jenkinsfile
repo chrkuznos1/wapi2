@@ -10,7 +10,7 @@ pipeline {
                         sh 'pwd'
                         sh 'ls -la'
                         sh 'apt update && apt install curl -y'
-                        sh 'wget --no-verbose --tries=1 --spider http://localhost:8080/swagger'
+                        sh 'curl -v http://localhost:8080/swagger'
                         // Run your actual command
                         sh ''' sleep 29 '''
                     } catch (Exception e) {
