@@ -11,7 +11,7 @@ pipeline {
                         sh 'ls -la'
                         sh 'IP=$(hostname -I | cut -f1 -d' ') && echo $IP'
                         sh 'apt update && apt install curl telnetd  -y'
-                        sh 'curl -X 'GET' http://$IP:8080/WeatherForecast -H 'accept: text/plain''
+                        sh 'curl -X 'GET' http://$IP:8080/WeatherForecast -H "accept: text/plain"'
                         // Run your actual command
                         sh ''' sleep 29 '''
                     } catch (Exception e) {
