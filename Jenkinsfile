@@ -9,9 +9,9 @@ pipeline {
                         // Log the current directory and list contents for debugging
                         sh 'pwd'
                         sh 'ls -la'
+                        sh 'IP=$(hostname -I | cut -f1 -d' ') && echo $IP'
                         sh 'apt update && apt install curl telnetd  -y'
-                        sh 'curl -v http://127.0.0.1:8080/swagger'
-                        sh 'telnet 127.0.0.1 8080'
+                        sh 'curl -X 'GET' http://$IP:8080/WeatherForecast -H 'accept: text/plain''
                         // Run your actual command
                         sh ''' sleep 29 '''
                     } catch (Exception e) {
