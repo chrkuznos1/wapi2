@@ -9,8 +9,9 @@ pipeline {
                         // Log the current directory and list contents for debugging
                         sh 'pwd'
                         sh 'ls -la'
-                        sh 'apt update && apt install curl -y'
+                        sh 'apt update && apt install curl telnetd  -y'
                         sh 'curl -v http://localhost:8080/swagger'
+                        sh 'telnet localhost 8080'
                         // Run your actual command
                         sh ''' sleep 29 '''
                     } catch (Exception e) {
