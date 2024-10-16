@@ -28,5 +28,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 RUN  pwd && ls -la
-RUN find / -name dotnet
 ENTRYPOINT ["/usr/bin/dotnet weatherapi.dll"]
