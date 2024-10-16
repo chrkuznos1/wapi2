@@ -27,4 +27,4 @@ RUN dotnet publish "./weatherapi.csproj" -c $BUILD_CONFIGURATION -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["pwd", "/usr/bin/dotnet --info", "./weatherapi/bin/Debug/net8.0/weatherapi.dll"]
+ENTRYPOINT ["dotnet", "weatherapi.dll"]

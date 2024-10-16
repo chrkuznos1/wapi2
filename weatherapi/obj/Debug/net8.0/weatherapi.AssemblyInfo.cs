@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("weatherapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d27efb1cf73e255988a553e257094a66cc5cef3c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bfa0e7a9a70706a34ae14ce7725f72e569be5cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("weatherapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("weatherapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

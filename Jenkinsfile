@@ -8,7 +8,6 @@ pipeline {
     stage( 'Build and Test' ) {
       steps {
         sh '''
-          sleep 20
           echo "test ok"
         '''
       }
@@ -17,9 +16,6 @@ pipeline {
 }
 
 // https://www.youtube.com/watch?v=ymI02j-hqpU
-
-
-
 
 // pipeline {
 //   agent any
