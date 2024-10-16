@@ -28,8 +28,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 RUN  pwd && ls -la && ls -la /usr/bin/dotnet && cat /etc/os-release
-CMD sleep 5
-ENTRYPOINT ["/bin/sh"]
 
-
-#ENTRYPOINT ["dotnet", "./weatherapi.dll"]
+CMD ["dotnet","weatherapi.dll"]
