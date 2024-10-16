@@ -9,7 +9,7 @@ pipeline {
                         // Log the current directory and list contents for debugging
                         sh 'pwd'
                         sh 'ls -la'
-                        sh 'IP=$(hostname -I | cut -f1 -d' ') && echo $IP'
+                        sh 'IP=$(hostname -I | cut -f1 -d' ')'
                         sh 'apt update && apt install curl telnetd  -y'
                         sh 'curl -X 'GET' http://$IP:8080/WeatherForecast -H "accept: text/plain"'
                         // Run your actual command
