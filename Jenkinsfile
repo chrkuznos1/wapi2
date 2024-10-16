@@ -10,8 +10,8 @@ pipeline {
                         sh 'pwd'
                         sh 'ls -la'
                         sh 'apt update && apt install curl telnetd  -y'
-                        sh 'curl -v http://localhost:8080/swagger'
-                        sh 'telnet localhost 8080'
+                        sh 'curl -v http://127.0.0.1:8080/swagger'
+                        sh 'telnet 127.0.0.1 8080'
                         // Run your actual command
                         sh ''' sleep 29 '''
                     } catch (Exception e) {
