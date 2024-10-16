@@ -28,4 +28,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 RUN  pwd && ls -la && ls -la /usr/bin/dotnet
+CMD sleep 5
 ENTRYPOINT ["dotnet", "./weatherapi.dll"]

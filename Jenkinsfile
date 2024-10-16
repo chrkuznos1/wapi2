@@ -8,7 +8,7 @@ pipeline {
     stage( 'Build and Test' ) {
       steps {
         sh '''
-          echo "test ok"
+          sleep 60
         '''
       }
     }
