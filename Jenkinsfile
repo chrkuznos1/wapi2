@@ -1,19 +1,45 @@
 pipeline {
-  agent { dockerfile true }
-  // environment {}
-  // tools {
-  //   .NET SDK 'net_sdk_8'
-  // }
-  stages {
-    stage( 'Build and Test' ) {
-      steps {
-        sh '''
-          sleep 60
-        '''
-      }
+    agent { dockerfile true }
+
+    stages {
+        stage('Build and Test') {
+            steps {
+                script {
+                    try {
+                        // Log the current directory and list contents for debugging
+                        sh 'pwd'
+                        sh 'ls -la'
+
+                        // Run your actual command
+                        sh ''' sleep 60 '''
+                    } catch (Exception e) {
+                        echo "Error occurred: ${e.getMessage()}"
+                        error "Build failed"
+                    }
+                }
+            }
+        }
     }
-  }
 }
+
+
+
+// pipeline {
+//   agent { dockerfile true }
+//   // environment {}
+//   // tools {
+//   //   .NET SDK 'net_sdk_8'
+//   // }
+//   stages {
+//     stage( 'Build and Test' ) {
+//       steps {
+//         sh '''
+//           sleep 60
+//         '''
+//       }
+//     }
+//   }
+// }
 
 // https://www.youtube.com/watch?v=ymI02j-hqpU
 
