@@ -8,7 +8,7 @@ pipeline {
                     try {
                         // Log the current directory and list contents for debugging
                         sh 'pwd'
-                        sh 'ls -la'
+                        sh 'ls -la && sleep 90'
                         sh 'apt update && apt install curl telnetd iproute2  -y'
                         sh 'ip a'
                         sh 'curl -X GET http://[::]:8080/WeatherForecast -H accept: text/plain'
