@@ -9,9 +9,10 @@ pipeline {
                         // Log the current directory and list contents for debugging
                         sh 'pwd'
                         sh 'ls -la'
-
+                        sh 'apt update && apt install curl -y'
+                        sh 'wget --no-verbose --tries=1 --spider http://localhost:8080'
                         // Run your actual command
-                        sh ''' sleep 2 '''
+                        sh ''' sleep 29 '''
                     } catch (Exception e) {
                         echo "Error occurred: ${e.getMessage()}"
                         error "Build failed"
