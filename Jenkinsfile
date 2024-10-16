@@ -11,7 +11,7 @@ pipeline {
                         sh 'ls -la'
                         sh 'apt update && apt install curl telnetd iproute2  -y'
                         sh 'ip a'
-                        sh 'curl -X 'GET' http://127.0.0.1:8080/WeatherForecast -H "accept: text/plain"'
+                        sh 'curl -X GET http://172.17.0.2:8080/WeatherForecast -H accept: text/plain'
                         // Run your actual command
                         sh ''' sleep 29 '''
                     } catch (Exception e) {
