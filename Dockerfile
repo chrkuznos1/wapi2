@@ -29,4 +29,4 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 RUN  pwd && ls -la
 RUN find / -name dotnet
-ENTRYPOINT ["dotnet ./weatherapi/bin/Debug/net8.0/weatherapi.dll"]
+ENTRYPOINT ["/usr/bin/dotnet weatherapi.dll"]
