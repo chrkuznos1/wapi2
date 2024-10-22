@@ -21,9 +21,9 @@ pipeline {
 //        }
 
         stage('Test and Build Docker Image') {
-            when {
-                branch 'master'
-                }
+            // when {
+            //     branch 'master'
+            //     }
             steps {
                 script {
                     //GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
@@ -32,9 +32,9 @@ pipeline {
             }
         }
         stage('Push Docker Image') {
-            when {
-                branch 'master'
-            }
+            // when {
+            //     branch 'master'
+            // }
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_creds') {
