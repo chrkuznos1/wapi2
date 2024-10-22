@@ -20,7 +20,7 @@ node {
 
         stage('Test and Build Docker Image') {
             when {
-                branch 'master'
+                branch 'main'
                 }
             steps {
                 script {
@@ -31,7 +31,7 @@ node {
         }
         stage('Push Docker Image') {
             when {
-                branch 'master'
+                branch 'main'
             }
             steps {
                 script {
