@@ -26,7 +26,8 @@ pipeline {
                 }
             steps {
                 script {
-                    GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
+                    //GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
+                    GIT_COMMIT_REV = "1.0"
                     customImage = docker.build("${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}")
                 }
             }
