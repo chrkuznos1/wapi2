@@ -5,6 +5,7 @@ pipeline {
 	   def registry = "christakisg4/mydemocontainer"
        def registryCredential = 'dockerhub_creds'
 	   def customImage = ''
+       def GIT_COMMIT_REV = ''
     } 
     options {
     skipDefaultCheckout(true)
@@ -25,7 +26,7 @@ pipeline {
                 }
             steps {
                 script {
-                    env.GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
+                    GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
                     customImage = docker.build("${registry}:${env.GIT_COMMIT_REV}-${env.BUILD_NUMBER}")
                 }
             }
