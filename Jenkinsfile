@@ -53,6 +53,9 @@ pipeline {
 				//sh "docker rmi ${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}"
                 sh "docker rmi \$(docker images --format '{{.ID}}' --filter=dangling=true)"
                 sh "docker rmi \$(docker images ${registry})"
+                sh '''
+                    if [[ $? -ne 0 ]] ; then exit 0 else echo "OK" fi
+                '''
 
 			}
 		}
