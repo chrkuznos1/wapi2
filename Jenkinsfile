@@ -28,6 +28,10 @@ pipeline {
                 script {
                     //GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
                     customImage = docker.build("${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}")
+
+                    customImage.inside {
+                        sh 'pwd && ls -la'
+                                        }
                 }
             }
         }
@@ -37,7 +41,7 @@ pipeline {
             // }
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_creds') {
+                    docker.withRegistry('', 'dockerhub_creds') {
                         customImage.push("${GIT_COMMIT_REV}-${env.BUILD_NUMBER}")
                         customImage.push("latest")
                     }
