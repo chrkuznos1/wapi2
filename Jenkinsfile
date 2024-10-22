@@ -8,7 +8,7 @@ pipeline {
        def GIT_COMMIT_REV = "1.0"
     } 
     options {
-    skipDefaultCheckout(true)
+    //skipDefaultCheckout(true)
     }
 
 //node {
