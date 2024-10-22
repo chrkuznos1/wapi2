@@ -10,7 +10,7 @@ pipeline {
     skipDefaultCheckout(true)
     }
 
-node {
+//node {
     stages {
 
 //        stage('Git Clone Source') {
@@ -54,5 +54,5 @@ node {
             }
         }
 }    
-	}
+	//}
 }
