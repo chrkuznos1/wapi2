@@ -52,12 +52,18 @@ pipeline {
 			steps{
 				sh "docker rmi ${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}"
 			}
-		}	
-		stage('Clean Workspace') {
+		}
+
+}       
+    post {
+		cleanup {
             steps {
             deleteDir()
-            }
-        }
-}    
+               dir("${workspace}@tmp") {
+            deleteDir()
+                                        }
+                    }
+                }   
+          }
 	//}
 }
