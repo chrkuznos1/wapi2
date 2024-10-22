@@ -51,8 +51,10 @@ pipeline {
 		stage('Remove Unused docker image') {
 			steps{
 				//sh "docker rmi ${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}"
+                sh "set +e"
                 sh '''docker rmi $(docker images ${registry})'''
                 sh "docker rmi \$(docker images --format '{{.ID}}' --filter=dangling=true)"
+                sh "set -e"
 			}
 		}
 
