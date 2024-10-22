@@ -10,8 +10,9 @@ pipeline {
     skipDefaultCheckout(true)
     }
 
-    stages {
 node {
+    stages {
+
 //        stage('Git Clone Source') {
 //            steps {
 //                git url: 'https://github.com/ptran32/nodejs-express-app.git'
