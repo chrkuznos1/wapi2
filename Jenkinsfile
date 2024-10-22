@@ -57,12 +57,10 @@ pipeline {
 }       
     post {
 		cleanup {
-            steps {
             deleteDir()
                dir("${workspace}@tmp") {
             deleteDir()
                                         }
-                    }
                 }   
           }
 	//}
