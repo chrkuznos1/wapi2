@@ -5,7 +5,6 @@ pipeline {
 	   def registry = "christakisg4/mydemocontainer"
        def registryCredential = 'dockerhub_creds'
 	   def customImage = ''
-       def lola = ''
        def GIT_COMMIT_REV = "1.0"
     } 
     // options {
@@ -30,10 +29,10 @@ pipeline {
                     //GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
                     customImage = docker.build("${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}")
 
-                    lola = customImage.withRun ("-u root:root --privileged -p 8080:8080 --network host") {
+                    customImage.withRun ("-u root:root --privileged -p 8080:8080 --network host") {
                         //sh 'ip a'
                         //sh 'apt update && apt install curl -y'
-                        sh 'docker inspect lola | grep "IPAddress"'
+                        //sh 'docker inspect lola | grep "IPAddress"'
                         sh 'sleep 10 && curl -v http://localhost:8080/swagger/index.html'
                                         }
                 }
