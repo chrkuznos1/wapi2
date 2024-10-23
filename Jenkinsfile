@@ -32,7 +32,7 @@ pipeline {
                     customImage.inside ("-u root:root --privileged -p 8000:8080") {
                         sh 'pwd && ls -la'
                         sh 'apt update && apt install curl -y'
-                        sh 'sleer 60 && curl -v http://localhost:8080/swagger'
+                        sh 'sleep 60 && curl -v http://localhost:8080/swagger'
                                         }
                 }
             }
