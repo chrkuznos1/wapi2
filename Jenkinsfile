@@ -5,6 +5,7 @@ pipeline {
 	   def registry = "christakisg4/mydemocontainer"
        def registryCredential = 'dockerhub_creds'
 	   def customImage = ''
+       def lola = ''
        def GIT_COMMIT_REV = "1.0"
     } 
     // options {
