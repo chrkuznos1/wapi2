@@ -29,9 +29,9 @@ pipeline {
                     //GIT_COMMIT_REV = sh (script: 'git log -n 1 --pretty=format:"%h"', returnStdout: true)
                     customImage = docker.build("${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}")
 
-                    customImage.withRun ("-p 8000:8080") {
+                    customImage.inside ("-p 8000:8080") {
                         sh 'pwd && ls -la'
-                        sh 'curl -v http://localhost:8000/swagger'
+                        sh 'curl -v http://localhost:8080/swagger'
                                         }
                 }
             }
