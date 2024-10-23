@@ -30,8 +30,8 @@ pipeline {
                     customImage = docker.build("${registry}:${GIT_COMMIT_REV}-${env.BUILD_NUMBER}")
 
                     customImage.withRun ("-u root:root --privileged -p 8080:8080") {
-                        sh 'ss -lnt'
-                        sh 'apt update && apt install curl -y'
+                        //sh 'ss -lnt'
+                        //sh 'apt update && apt install curl -y'
                         sh 'sleep 10 && curl --ipv6 -s -v http://localhost:8080/swagger/index.html'
                                         }
                 }
